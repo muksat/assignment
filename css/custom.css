@@ -1,12 +1,4 @@
- $(window).resize(function() {
-  var ww = $(window).width();
-  $('.flexslider  li').each(function() {
-    $(this).width(ww);
-  });
-});
-        </script>
-        <style>
-            .title-container{
+  .title-container{
                 position:relative;
             }
             .title{
@@ -55,4 +47,3 @@
                  left:5px; 
                  z-index:5;
                 }
-        </style>

@@ -1,4 +1,5 @@
 <html>
+<meta charset="utf-8">
     <head>
         <title></title>
 
@@ -22,16 +23,7 @@
 
         <!--<script src="app/apiService.js"></script>-->
         <script src="app/sliderController.js"></script>
-        <script type="text/javascript">
-            
-           // $(document).ready(function(){
-           //      $('.flexslider').flexslider({
-           //          controlNav: true,
-           //          directionNav: true,
-           //       });
-           //  }); 
-
-        </script>
+      
         <style>
             .title-container{
                 position:relative;
@@ -82,6 +74,8 @@
                  left:5px; 
                  z-index:5;
                 }
+
+                
         </style>
     </head>
     <body ng-app="sliderModule">
@@ -106,15 +100,14 @@
                     </flex-slider>
                 </div>
             </div>
-
-
+    
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <h4>Latest Article</h4>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 article" ng-repeat="article in articleList track by $index">
                     <img ng-src="{{article.ThumbnailUrl}}">
-                    <div><a  target="blank" href="{{ article.Url}}">{{article.Title|limitTo:20}}</a><br/>{{article.CreateDate | date}}</div>
+                    <div><a  target="blank" href="{{ article.Url}}">{{article.Title|limitTo:6}}</a><br/>{{article.CreateDate | date}}</div>
                 </div>
             </div>
         </div>
